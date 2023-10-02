@@ -28,6 +28,9 @@ li {
 .bg-gradient {
     background: linear-gradient(180deg, #02B5EA 3%, rgba(1.95, 181.25, 233.75, 0.15) 100%);
 }
+.bg-gradient-footer {
+    background: linear-gradient(180deg, #ff0080 3%, #ff028d26 100%);
+}
 
 @media screen and (max-width:768px) {
     section {
