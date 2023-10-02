@@ -8,7 +8,7 @@ function BestChip() {
     return (
         <section className='relative w-full py-[100px]'>
             <h2 className='font-hero text-[30px] sm:text-4xl mb-[70px]'>We Provide the Tasty and<br /> best Chips for you!</h2>
-            <img src={Chips} alt="chips" className=' absolute right-0  md:top-64 top-48 w-20 md:w-3/12' />
+            <img src={Chips} alt="chips" className=' absolute right-0 md:top-64 top-56 w-20 md:w-3/12' />
 
             <div className=' flex flex-col md:flex-row md:gap-16 xl:gap-32 items-center'>
                 <img src={BestImg} alt="" className=' md:w-7/12' />
