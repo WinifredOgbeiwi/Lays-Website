@@ -4,7 +4,6 @@ import BestChip from './LandingPage/BestChip'
 import FindBest from './LandingPage/FindBest'
 import Review from './LandingPage/Review'
 import Cat from './LandingPage/CAT'
-import Word from './LandingPage/Word'
 
 const Home = () => {
   return (
@@ -14,7 +13,6 @@ const Home = () => {
       <FindBest />
       <Review />
       <Cat />
-
     </div>
   )
 }
