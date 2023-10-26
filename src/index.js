@@ -1,14 +1,47 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import React from 'react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import i18next from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import HttpApi from "i18next-http-backend";
 
+i18next
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .use(HttpApi)
+  .init({
+    fallbackLng: "en",
+    detection: {
+      order: [
+        "htmlTag",
+        "cookie",
+        "localStorage",
+        "sessionStorage",
+        "navigator",
+        "querystring",
+        "path",
+        "subdomain",
+      ],
+      caches: ["cookie"],
+    },
+    backend: {
+      loadPath: "/{{lng}}/translate.json",
+    },
+  });
+
+// function App() {
+//   const { t } = useTranslation();
+
+//   return <h2>{t("Welcome to React")}</h2>;
+// }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

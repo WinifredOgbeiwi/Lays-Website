@@ -14,7 +14,7 @@ const Home = () => {
       <FindBest />
       <Review />
       <Cat />
-      <Word/>
+
     </div>
   )
 }
